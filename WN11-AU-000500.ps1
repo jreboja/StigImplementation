@@ -29,12 +29,12 @@ try {
     $verify = Get-ItemProperty -Path $registryPath -Name $valueName -ErrorAction SilentlyContinue
     
     if ($verify.$valueName -eq $valueData) {
-        Write-Host "✓ SUCCESS: Registry key created and verified" -ForegroundColor Green
+        Write-Host "SUCCESS: Registry key created and verified" -ForegroundColor Green
         Write-Host "  Full Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application\" -ForegroundColor White
         Write-Host "  Value: MaxSize = $valueData (0x00008000)" -ForegroundColor White
         Write-Host "  Note: This sets Application event log maximum size to 32,768 KB (32 MB)" -ForegroundColor Gray
     } else {
-        Write-Host "✗ WARNING: Registry value may not be set correctly" -ForegroundColor Yellow
+        Write-Host "WARNING: Registry value may not be set correctly" -ForegroundColor Yellow
     }
 }
 catch {
