@@ -1,2 +1,2 @@
-# StigImplementation
-Powershell scripts to automate STIG implementation.
+# STIG powershell automation scripts
+Powershell scripts to automate STIG compliance.
